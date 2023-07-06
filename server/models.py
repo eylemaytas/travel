@@ -130,3 +130,58 @@ serialize_rules = ('-blogs',)
 
 #Validations
 
+
+
+# class Destination(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     city_id = db.Column(db.Integer, db.ForeignKey('cities.id'))
+#     city = db.relationship('City', backref='destinations')
+
+# class City(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String)
+#     image = db.Column(db.String)
+#     language = db.Column(db.String)
+#     climate = db.Column(db.String)
+#     created_at = db.Column(db.DateTime)
+#     updated_at = db.Column(db.DateTime)
+#     continent_id = db.Column(db.Integer, db.ForeignKey('continents.id'))
+#     continent = db.relationship('Continent', backref='cities')
+
+# class Food(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String)
+#     image = db.Column(db.String)
+#     description = db.Column(db.String)
+#     restaurant_recommendation = db.Column(db.String)
+#     created_at = db.Column(db.DateTime)
+#     updated_at = db.Column(db.DateTime)
+#     continent_id = db.Column(db.Integer, db.ForeignKey('continents.id'))
+#     destination_id = db.Column(db.Integer, db.ForeignKey('destinations.id'))
+#     continent = db.relationship('Continent', backref='foods')
+#     destination = db.relationship('Destination', backref='foods')
+
+# class Continent(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String)
+#     image = db.Column(db.String)
+#     food_id = db.Column(db.Integer, db.ForeignKey('foods.id'))
+
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     first_name = db.Column(db.String)
+#     last_name = db.Column(db.String)
+#     username = db.Column(db.String)
+#     password = db.Column(db.String)
+#     created_at = db.Column(db.DateTime)
+#     updated_at = db.Column(db.DateTime)
+
+# class Blog(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     image = db.Column(db.String)
+#     blog_post = db.Column(db.String)
+#     like_count = db.Column(db.Integer)
+#     created_at = db.Column(db.DateTime)
+#     updated_at = db.Column(db.DateTime)
+#     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+#     user = db.relationship('User', backref='blogs')
